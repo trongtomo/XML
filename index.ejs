@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+
+    <div style="display: flex; justify-content: space-between; margin: 20px;">
+        <div style="width: 45%;">
+            <h2>Wikipedia Data</h2>
+            <ul>
+                <% wikipediaData.forEach(data => { %>
+                    <li>
+                        <strong><%= data.name %></strong>
+                        <ul>
+                            <li>Population: <%= data.population %></li>
+                            <!-- Add other Wikipedia data fields as needed -->
+                        </ul>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+
+        <div style="width: 45%;">
+            <h2>CIA Factbook Data</h2>
+            <ul>
+                <% ciaData.forEach(data => { %>
+                    <li>
+                        <strong><%= data.name %></strong>
+                        <ul>
+                            <!-- Add CIA Factbook data fields here -->
+                        </ul>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
+    </div>
+
+    <a href="/integrated-data"><button>Show Integrated Data</button></a>
+</body>
+</html>

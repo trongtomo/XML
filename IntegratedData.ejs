@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Integrated Data</title>
+</head>
+<body>
+    <h1>Integrated Data</h1>
+    <ul>
+        <% integratedData.forEach(data => { %>
+            <li>
+                <strong><%= data.name %></strong>
+                <ul>
+                    <li>Population: <%= data.population %></li>
+                    <!-- Add other data fields as needed -->
+                </ul>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
